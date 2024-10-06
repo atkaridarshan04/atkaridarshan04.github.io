@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Certifications</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Certifications</h1>
+            <nav>
+                <a href="../">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="certificates" class="container">
+        <div class="certification-grid">
+            <div class="certification-card">
+                <img src="./DockerFoundationsProfessionalCertificate.jpg" alt="Docker Foundations Professional Certificate" class="certificate-image" onclick="openModal(this.src)" />
+                <h3>Docker Foundations Professional Certificate</h3>
+                <p>Earned the Docker Foundations Professional Certificate from LinkedIn Learning and Docker, focusing on the core concepts of containerization and Docker's suite of tools. The course explored Docker's architecture, container management, networking, storage, and Docker Compose. It provided a strong understanding of how Docker streamlines the development, deployment, and scaling of applications, enabling efficient use of resources across different environments.</p>
+            </div>
+
+            <div class="certification-card">
+                <img src="./LearningLinuxCommandLine.jpg" alt="Learning Linux Command Line" class="certificate-image" onclick="openModal(this.src)" />
+                <h3>Learning Linux Command Line</h3>
+                <p>Completed the Learning Linux Command Line course on LinkedIn Learning, where I gained a solid introduction to the essentials of Linux system administration. The course covered basic commands, navigating directories, managing files, and understanding users and permissions. It’s been a great start in learning how to efficiently work with Linux systems and handle basic administrative tasks using the command line.</p>   
+            </div>
+
+            <div class="certification-card">
+                <img src="./Jenkins-kokekloud.webp" alt="Jenkins" class="certificate-image" onclick="openModal(this.src)" />
+                <h3>Jenkins</h3>
+                <p>Completed the Jenkins course from KodeKloud, which provided a comprehensive overview of Jenkins and its core functionalities. The course covered topics such as installation, plugin management, system administration, pipeline creation, configuring build agents, Blue Ocean, and securing Jenkins environments. Hands-on labs offered practical experience in setting up Jenkins, creating CI/CD pipelines, and securing the environment.</p>   
+            </div>
+
+            <div class="certification-card">
+                <img src="./Ansible-kodekloud.webp" alt="Learn Ansible Basics - Beginners Course" class="certificate-image" onclick="openModal(this.src)" />
+                <h3>Learn Ansible Basics - Beginners Course</h3>
+                <p>I completed the Learn Ansible Basics - Beginners Course from KodeKloud, gaining a foundational understanding of Ansible, an open-source automation tool. The course covered essential concepts such as configuration management, automating server provisioning, and writing simple playbooks. The hands-on labs provided by the course helped solidify these concepts.</p>   
+            </div>
+
+        </div>
+    </section>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Darshan Atkari</p>
+    </footer>
+
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById("modal");
+            const modalImage = document.getElementById("modal-image");
+            modal.style.display = "block";
+            modalImage.src = src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
