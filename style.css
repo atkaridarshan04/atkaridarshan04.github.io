@@ -83,7 +83,7 @@ ul li {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
 }
 
@@ -110,7 +110,7 @@ ul li {
     text-decoration: underline;
 }
 
-    /* Timeline Styling */
+/* Timeline Styling */
 .timeline {
     position: relative;
     max-width: 900px;
@@ -142,7 +142,6 @@ ul li {
     color: #999;
 }
 
-
 /* Basic styling for pagination buttons */
 .pagination {
     margin-top: 20px;
@@ -173,6 +172,7 @@ footer p {
     font-size: 1em;
 }
 
+/* Certification Row */
 .certification-row {
     display: flex;
     align-items: center;
@@ -198,7 +198,6 @@ footer p {
 .button:hover {
     background-color: #47575d;
 }
-
 
 /* Contact Section Styling */
 #contact {
@@ -228,4 +227,63 @@ footer p {
 .contact-info a:hover {
     color: #2980b9;
     transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .timeline-item {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .articles-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .articles-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .timeline-item h3 {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .timeline-item {
+        padding: 8px;
+    }
+
+    .timeline-item h3 {
+        font-size: 1.1em;
+    }
+
+    .timeline-date {
+        font-size: 0.8em;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
 }

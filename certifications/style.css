@@ -1,3 +1,4 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -11,15 +12,15 @@ header {
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 }
 
 header .container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; 
-    width: 100%; 
+    justify-content: space-between;
+    width: 100%;
 }
 
 h1 {
@@ -27,19 +28,19 @@ h1 {
 }
 
 nav {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 
 nav a {
     color: #ffffff;
-    margin: 0 30px; /* Increased margin for more spacing */
+    margin: 0 30px;
     text-decoration: none;
-    font-size: 1.2em; /* Increased font size for links */
+    font-size: 1.2em;
 }
 
 nav a:first-child {
-    font-size: 1.5em; /* Increased size specifically for Home link */
+    font-size: 1.5em;
 }
 
 h2, h3 {
@@ -120,4 +121,84 @@ footer {
     padding: 20px 0;
     background: #35424a;
     color: #ffffff;
+}
+
+/* Responsive Styles */
+
+/* For screens up to 1024px */
+@media screen and (max-width: 1024px) {
+    nav a {
+        margin: 0 20px;
+        font-size: 1em;
+    }
+
+    .certification-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For screens up to 768px */
+@media screen and (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 1em;
+    }
+
+    .certification-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* For screens up to 480px */
+@media screen and (max-width: 480px) {
+    nav a {
+        font-size: 0.9em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .certification-card {
+        padding: 15px;
+    }
+
+    .modal-content {
+        max-width: 95%;
+        max-height: 95%;
+    }
+
+    .close {
+        font-size: 30px;
+    }
+
+    /* Ensure vertical stacking of the header and grid */
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .certification-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjust font size for better readability on small screens */
+    h1 {
+        font-size: 1.8em;
+    }
+
+    nav a {
+        font-size: 0.9em;
+        margin: 8px 0;
+    }
 }
