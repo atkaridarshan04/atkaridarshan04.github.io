@@ -6,6 +6,7 @@ body {
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -19,12 +20,13 @@ header {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    text-transform: uppercase;
 }
 
 nav a {
@@ -32,9 +34,11 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav a:hover {
+    color: #f39c12;
     text-decoration: underline;
 }
 
@@ -44,11 +48,12 @@ section {
 }
 
 section h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
     color: #333;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 3px solid #3498db;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 section p {
@@ -84,7 +89,7 @@ ul li {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    transition: transform 0.3s;
 }
 
 .article-card:hover {
@@ -110,40 +115,151 @@ ul li {
     text-decoration: underline;
 }
 
-/* Timeline Styling */
+/* Timeline (Projects) Styling */
 .timeline {
     position: relative;
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
+    border-left: 4px solid #3498db;
 }
 
 .timeline-item {
-    padding: 10px 20px;
-    background-color: #fff;
     position: relative;
-    border-left: 4px solid #3498db;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
     border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    background-color: #f4f4f9;
+    transform: translateY(-5px);
 }
 
 .timeline-item h3 {
-    margin: 0;
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #333;
+    margin: 0;
 }
 
 .timeline-date {
-    position: absolute;
-    right: 10px;
-    top: 10px;
     font-size: 0.9em;
     color: #999;
+    margin-top: 5px;
+    display: block;
 }
 
-/* Basic styling for pagination buttons */
+/* Certification Row Styling */
+.certification-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.certification-row p {
+    margin: 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.certification-row .button {
+    background-color: #35424a;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.certification-row .button:hover {
+    background-color: #47575d;
+}
+
+/* Contact Section Styling */
+#contact {
+    background-color: #ffffff;
+    padding: 0px 30px 30px;
+    border-radius: 12px;
+    border-left: 5px solid #3498db;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    transition: transform 0.3s;
+}
+
+.contact-title {
+    font-size: 1.8em;
+    color: #3498db;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-icon {
+    font-size: 1.5em;
+    color: #3498db;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.1em;
+}
+
+.contact-info p {
+    margin: 0;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #2980b9;
+}
+
+.contact-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+
+/* Pagination Styling */
 .pagination {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -151,11 +267,16 @@ ul li {
     padding: 10px 15px;
     margin: 0 5px;
     cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.pagination button.active {
-    background-color: #007bff;
-    color: white;
+.pagination button.active,
+.pagination button:hover {
+    background-color: #2980b9;
 }
 
 /* Footer Styling */
@@ -172,63 +293,6 @@ footer p {
     font-size: 1em;
 }
 
-/* Certification Row */
-.certification-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.certification-row p {
-    margin: 0;
-}
-
-.button {
-    background-color: #35424a;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    white-space: nowrap;
-}
-
-.button:hover {
-    background-color: #47575d;
-}
-
-/* Contact Section Styling */
-#contact {
-    background-color: #f9f9f9;
-    padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-    text-align: left;
-}
-
-.contact-info {
-    line-height: 1.6;
-}
-
-.contact-info p {
-    margin: 15px 0;
-    font-size: 1.1em;
-}
-
-.contact-info a {
-    color: #3498db;
-    text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.contact-info a:hover {
-    color: #2980b9;
-    transform: scale(1.05);
-}
-
 /* Responsive Styles */
 @media screen and (max-width: 1024px) {
     .timeline-item {
@@ -241,6 +305,10 @@ footer p {
 
     .articles-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .certification-row {
+        justify-content: center;
     }
 }
 
@@ -255,6 +323,11 @@ footer p {
 
     .timeline-item h3 {
         font-size: 1.3em;
+    }
+
+    .certification-row {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
@@ -285,5 +358,9 @@ footer p {
 
     footer p {
         font-size: 0.9em;
+    }
+
+    .certification-row .button {
+        padding: 8px 15px;
     }
 }
