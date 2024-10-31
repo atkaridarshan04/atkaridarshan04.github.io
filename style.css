@@ -225,6 +225,7 @@ ul li {
     display: flex;
     align-items: center;
     gap: 10px;
+    word-wrap: break-word; /* Ensure text wraps within container */
 }
 
 .contact-info a {
@@ -254,6 +255,35 @@ ul li {
     background-color: #2980b9;
     transform: translateY(-3px);
 }
+
+/* Responsive Adjustments for Contact Section */
+@media screen and (max-width: 768px) {
+    .contact-info {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #contact {
+        padding: 10px;
+    }
+
+    .contact-title {
+        font-size: 1.5em;
+    }
+
+    .contact-info {
+        font-size: 1em;
+        gap: 10px;
+    }
+
+    .contact-info p {
+        display: block; /* Stacks items vertically on smaller screens */
+        white-space: normal; /* Allows line breaking for long text */
+        overflow-wrap: break-word; /* Ensures text stays within bounds */
+    }
+}
+
 
 
 /* Pagination Styling */
