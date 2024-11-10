@@ -24,7 +24,7 @@ I share articles on insights and topics I pick up along my learning journey. Exp
 
 - **GitHub**: [atkaridarshan04](https://github.com/atkaridarshan04)
 - **LinkedIn**: [Darshan Atkari](https://linkedin.com/in/darshan-atkari-577809278/)
-- **X**: [atkaridarshan04](https://x.com/atkaridarshan04)
+- **X**: [@atkaridarshan04](https://x.com/atkaridarshan04)
 
 ---
 Thank you for visiting my portfolio site! If you find my projects or articles useful, feel free to give them a star ⭐ and connect with me!
