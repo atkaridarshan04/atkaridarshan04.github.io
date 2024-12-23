@@ -3,203 +3,121 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darshan Atkari Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-
     <header>
         <div class="container">
-            <h1>Darshan Atkari Portfolio</h1>
+            <h1>Darshan Atkari | Portfolio</h1>
             <nav>
                 <a href="#about">About Me</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
-                <a href="#articles">Articles</a>
                 <a href="#certifications">Certifications</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
 
-    <!-- ---------------------------------------------------------------- -->
+    <main>
+        <section id="about" class="container section-box">
+            <h2>About Me</h2>
+            <p>I'm Darshan Atkari, an undergraduate student pursuing a B.Tech in Computer Engineering at VIT Pune. I'm passionate about technology, always curious to learn new things, and constantly working on improving my skills in areas like Linux, DevOps, and Cloud-Native.</p>
+            <p>I enjoy solving challenges, experimenting with new tools, and building projects that help me grow. Alongside my studies, I also do documentation on Hashnode, where I share what I learn with the tech community.</p>
+        </section>
 
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <p>I'm Darshan Atkari, an undergraduate student pursuing a B.Tech in Computer Engineering at VIT Pune. I'm
-            passionate about technology, always curious to learn new things, and constantly working on improving my
-            skills in areas like Linux, Docker, and DevOps.</p>
+        <section id="skills" class="container section-box">
+            <h2>Skills</h2>
+            <ul>
+                <li>DevOps Tools: Docker, Kubernetes, Jenkins, Git, GitLab, Linux</li>
+                <li>Programming Languages: C, Java, Bash, Python, JavaScript</li>
+                <li>Cloud Platforms: AWS</li>
+            </ul>
+        </section>
 
-        <p>I enjoy solving challenges, experimenting with new tools, and building projects that help me grow. Alongside
-            my studies, I also write articles on Hashnode, where I share what I learn with the tech community.</p>
-
-        <p>As a student, I'm excited to explore the world of technology and work towards building a successful career in
-            the tech industry.</p>
-    </section>
-
-    <!-- ---------------------------------------------------------------- -->
-
-    <section id="skills" class="container">
-        <h2>Skills</h2>
-        <ul>
-            <li>DevOps Tools: Docker, Kubernetes, Jenkins, Git, Linux</li>
-            <li>Programming: C, Bash, Java, Python, JavaScript</li>
-            <li>Cloud: AWS</li>
-        </ul>
-    </section>
-
-    <!-- ---------------------------------------------------------------- -->
-
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>MERN DevOps Project</h3>
-                <strong>Repository:</strong> <a href="https://github.com/atkaridarshan04/MERN-DevOps" target="_blank"
-                    rel="noopener noreferrer">GitHub Repository</a>
-                <span class="timeline-date">Oct 2024</span>
+        <section id="projects" class="container section-box">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>MERN DevOps Project</h3>
+                    <a href="https://github.com/atkaridarshan04/MERN-DevOps" target="_blank">View Repository</a>
+                </div>
+                <div class="project-card">
+                    <h3>GitLab-CICD</h3>
+                    <a href="https://github.com/atkaridarshan04/GitLab-CICD" target="_blank">View Repository</a>
+                </div>
+                <div class="project-card">
+                    <h3>SpringBoot DevOps Project</h3>
+                    <a href="https://github.com/atkaridarshan04/SpringBoot-DevOps" target="_blank">View Repository</a>
+                </div>
+                <div class="project-card">
+                    <h3>ArgoCD-Hub-Spoke-Model</h3>
+                    <a href="https://github.com/atkaridarshan04/ArgoCD-Hub-Spoke-Model" target="_blank">View Repository</a>
+                </div>
+                <div class="project-card">
+                    <h3>EKS Cluster Deployment</h3>
+                    <a href="https://github.com/atkaridarshan04/EKS-Deployment" target="_blank">View Repository</a>
+                </div>
             </div>
-            <div class="timeline-item">
-                <h3> ArgoCD-Hub-Spoke-Model</h3>
-                <strong>Repository:</strong> <a href="https://github.com/atkaridarshan04/ArgoCD-Hub-Spoke-Model"
-                    target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-                <span class="timeline-date">Oct 2024</span>
+        </section>
+
+        <section id="certifications" class="container section-box">
+            <h2>Certifications</h2>
+            <p>Explore my certifications by visiting <button class="styled-button"><a href="./certifications/certifications.html">Certifications Page</a></button></p>
+        </section>
+
+        <section id="contact" class="container section-box">
+            <h2>Contact</h2>
+            <div class="contact-info-grid">
+                <div class="contact-card email-card" onclick="showEmailPopup()">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <span>Email</span>
+                </div>
+                <a href="https://www.linkedin.com/in/darshan-atkari-577809278/" class="contact-card" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin contact-icon"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/atkaridarshan04" class="contact-card" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github contact-icon"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://x.com/atkaridarshan04" class="contact-card" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter contact-icon"></i>
+                    <span>X</span>
+                </a>
+                <a href="https://hashnode.com/@atkaridarshan04" class="contact-card" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-pen-nib contact-icon"></i> <!-- Replacing the icon -->
+                    <span>Hashnode</span>
+                </a>
+                
+                
             </div>
-            <div class="timeline-item">
-                <h3>SpringBoot DevOps Project</h3>
-                <span><strong>Repository:</strong> <a href="https://github.com/atkaridarshan04/SpringBoot-DevOps"
-                        target="_blank" rel="noopener noreferrer">GitHub Repository</a></span>
-                <span class="timeline-date">Nov 2024</span>
-            </div>
-            <div class="timeline-item">
-                <h3>EKS Cluster Deployment</h3>
-                <strong>Repository:</strong> <a href="https://github.com/atkaridarshan04/EKS-Deployment" target="_blank"
-                    rel="noopener noreferrer">GitHub Repository</a>
-                <span class="timeline-date">Oct 2024</span>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- ---------------------------------------------------------------- -->
-
-    <section id="certifications" class="container">
-        <h2>Certifications</h2>
-        <div class="certification-row">
-            <p>Here are some of the certifications I have earned:</p>
-            <a href="./certifications/certifications.html" class="button">View My Certifications</a>
-        </div>
-    </section>
-
-
-
-    <!-- ---------------------------------------------------------------- -->
-
-    <section id="articles" class="container">
-        <h2>Articles</h2>
-        <div class="articles-grid">
-            <div class="article-card page" id="page1">
-                <h3>The Ultimate Kubernetes Guide: Everything You Need To Know</h3>
-                <p>Unlock the power of container orchestration with this comprehensive guide to Kubernetes (K8s). From
-                    fundamental concepts to advanced deployment strategies, this article covers everything you need to
-                    know to get started with K8s. <a href="https://atkaridarshan04.hashnode.dev/kubernetes-guide"
-                        target="_blank" rel="noopener noreferrer">Read on Hashnode</a></p>
-            </div>
-            <div class="article-card page" id="page1">
-                <h3>Containerization 101: Mastering Docker Essentials</h3>
-                <p>Step into the world of containerization with this essential guide to Docker. Learn the key concepts,
-                    commands, and best practices that will empower you to create, manage, and deploy containers
-                    effectively. <a
-                        href="https://atkaridarshan04.hashnode.dev/docker-essentials-a-beginners-guide-to-containerization"
-                        target="_blank" rel="noopener noreferrer">Read on Hashnode</a></p>
-            </div>
-            <div class="article-card page" id="page1">
-                <h3>The Comprehensive Guide to Git: Tools and Commands</h3>
-                <p>Dive into the world of version control with this comprehensive guide to Git. Explore essential tools
-                    and commands that will help you manage your codebase effectively, collaborate seamlessly with
-                    others, and track changes over time.<a
-                        href="https://atkaridarshan04.hashnode.dev/the-comprehensive-guide-to-git-tools-and-commands"
-                        target="_blank" rel="noopener noreferrer">Read on Hashnode</a></p>
-            </div>
-            <div class="article-card page" id="page2" style="display: none;">
-                <h3>Understanding Network Models</h3>
-                <p>Dive into the world of networking as you explore the different network models that form the backbone
-                    of communication in computer systems. This article breaks down the key concepts of various models,
-                    including OSI and TCP/IP, and discusses their relevance in modern networking. <a
-                        href="https://atkaridarshan04.hashnode.dev/understanding-network-models" target="_blank"
-                        rel="noopener noreferrer">Read on Hashnode</a></p>
-            </div>
-            <div class="article-card page" id="page2" style="display: none;">
-                <h3>A Beginner's Guide to DNS Servers</h3>
-                <p>Get started with the fundamentals of Domain Name System (DNS) servers in this beginner-friendly
-                    guide. Learn how DNS translates human-readable domain names into IP addresses, enabling seamless
-                    access to websites. This article covers the structure of DNS, common terminology, making it easy for
-                    anyone to understand. <a
-                        href="https://atkaridarshan04.hashnode.dev/a-beginners-guide-to-dns-servers" target="_blank"
-                        rel="noopener noreferrer">Read on Hashnode</a></p>
-            </div>
-            <div class="article-card page" id="page2" style="display: none;">
-                <h3>Comprehensive Guide to Connect and Configure Servers with OpenSSH</h3>
-                <p>Master the art of secure communication between servers with this comprehensive guide on OpenSSH. This
-                    article walks you through the configuration, and advanced features of OpenSSH, providing
-                    step-by-step instructions to connect and manage servers securely. <a
-                        href="https://atkaridarshan04.hashnode.dev/comprehensive-guide-to-connecting-and-configuring-servers-with-openssh"
-                        target="_blank" rel="noopener noreferrer">Read on Hashnode</a></p>
-            </div>
-        </div>
-
-        <div class="pagination">
-            <button onclick="showPage(1)" class="active">1</button>
-            <button onclick="showPage(2)">2</button>
-        </div>
-
-        <br>
-    </section>
-
-    <script>
-        // JavaScript function to handle pagination
-        function showPage(page) {
-            // Get all page elements
-            const pages = document.querySelectorAll('.page');
-            // Hide all pages
-            pages.forEach(p => p.style.display = 'none');
-            // Show the selected page
-            document.querySelectorAll(`#page${page}`).forEach(p => p.style.display = 'block');
-
-            // Update pagination button styles
-            const buttons = document.querySelectorAll('.pagination button');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            buttons[page - 1].classList.add('active');
-        }
-
-        // Show the first page by default
-        showPage(1);
-    </script>
-
-    <!-- ---------------------------------------------------------------- -->
-
-    <section id="contact" class="container">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:atkaridarshan04@gmail.com">atkaridarshan04@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/darshan-atkari-577809278/" target="_blank"
-                    rel="noopener noreferrer">linkedin.com/in/darshan-atkari</a></p>
-            <p>GitHub: <a href="https://github.com/atkaridarshan04" target="_blank"
-                    rel="noopener noreferrer">github.com/atkaridarshan04</a></p>
-            <p>X: <a href="https://x.com/atkaridarshan04" target="_blank"
-                    rel="noopener noreferrer">x.com/atkaridarshan04</a></p>
-            <p>Hashnode: <a href="https://hashnode.com/@atkaridarshan04" target="_blank"
-                    rel="noopener noreferrer">hashnode.com/@atkaridarshan04</a></p>
-        </div>
-    </section>
-
-    <!-- ---------------------------------------------------------------- -->
     <footer>
-        <p>&copy; 2024 Darshan Atkari</p>
+        <p>&copy; 2024 Darshan Atkari. All rights reserved.</p>
     </footer>
 
+    <!-- Email Popup -->
+    <div id="email-popup" class="email-popup hidden">
+        <p>Email: atkaridarshan04@gmail.com</p>
+        <button class="styled-button" onclick="closeEmailPopup()">Close</button>
+    </div>
+
+    <script>
+        function showEmailPopup() {
+            document.getElementById('email-popup').classList.remove('hidden');
+        }
+
+        function closeEmailPopup() {
+            document.getElementById('email-popup').classList.add('hidden');
+        }
+    </script>
 </body>
 
 </html>
