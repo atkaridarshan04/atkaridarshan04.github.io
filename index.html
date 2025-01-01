@@ -26,8 +26,12 @@
     <main>
         <section id="about" class="container section-box">
             <h2>About Me</h2>
-            <p>I'm Darshan Atkari, an undergraduate student pursuing a B.Tech in Computer Engineering at VIT Pune. I'm passionate about technology, always curious to learn new things, and constantly working on improving my skills in areas like Linux, DevOps, and Cloud-Native.</p>
-            <p>I enjoy solving challenges, experimenting with new tools, and building projects that help me grow. Alongside my studies, I also do documentation on Hashnode, where I share what I learn with the tech community.</p>
+            <p>I'm Darshan Atkari, an undergraduate student pursuing a B.Tech in Computer Engineering at VIT Pune. I'm
+                passionate about technology, always curious to learn new things, and constantly working on improving my
+                skills in areas like Linux, DevOps, and Cloud-Native.</p>
+            <p>I enjoy solving challenges, experimenting with new tools, and building projects that help me grow.
+                Alongside my studies, I also do documentation on Hashnode, where I share what I learn with the tech
+                community.</p>
         </section>
 
         <section id="skills" class="container section-box">
@@ -55,10 +59,6 @@
                     <a href="https://github.com/atkaridarshan04/SpringBoot-DevOps" target="_blank">View Repository</a>
                 </div>
                 <div class="project-card">
-                    <h3>ArgoCD-Hub-Spoke-Model</h3>
-                    <a href="https://github.com/atkaridarshan04/ArgoCD-Hub-Spoke-Model" target="_blank">View Repository</a>
-                </div>
-                <div class="project-card">
                     <h3>EKS Cluster Deployment</h3>
                     <a href="https://github.com/atkaridarshan04/EKS-Deployment" target="_blank">View Repository</a>
                 </div>
@@ -67,56 +67,67 @@
 
         <section id="certifications" class="container section-box">
             <h2>Certifications</h2>
-            <p>Explore my certifications by visiting <button class="styled-button"><a href="./certifications/certifications.html">Certifications Page</a></button></p>
+            <p>Explore my certifications here: <button class="styled-button"><a
+                        href="./certifications/certifications.html" aria-label="View Certifications Page">Certifications Page</a></button></p>
         </section>
 
         <section id="contact" class="container section-box">
             <h2>Contact</h2>
             <div class="contact-info-grid">
-                <div class="contact-card email-card" onclick="showEmailPopup()">
-                    <i class="fas fa-envelope contact-icon"></i>
+                <!-- Email Section -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=atkaridarshan04@gmail.com" target="_blank"
+                    class="contact-card email-card" aria-label="Email">
+                    <i class="fas fa-envelope contact-icon" aria-hidden="true"></i>
                     <span>Email</span>
-                </div>
-                <a href="https://www.linkedin.com/in/darshan-atkari-577809278/" class="contact-card" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin contact-icon"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/darshan-atkari-577809278/" class="contact-card" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin contact-icon" aria-hidden="true"></i>
                     <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/atkaridarshan04" class="contact-card" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github contact-icon"></i>
+                <a href="https://github.com/atkaridarshan04" class="contact-card" target="_blank"
+                    rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github contact-icon" aria-hidden="true"></i>
                     <span>GitHub</span>
                 </a>
-                <a href="https://x.com/atkaridarshan04" class="contact-card" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-twitter contact-icon"></i>
+                <a href="https://x.com/atkaridarshan04" class="contact-card" target="_blank" rel="noopener noreferrer" aria-label="X">
+                    <i class="fab fa-twitter contact-icon" aria-hidden="true"></i>
                     <span>X</span>
                 </a>
-                <a href="https://hashnode.com/@atkaridarshan04" class="contact-card" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-pen-nib contact-icon"></i> <!-- Replacing the icon -->
+                <a href="https://hashnode.com/@atkaridarshan04" class="contact-card" target="_blank"
+                    rel="noopener noreferrer" aria-label="Hashnode">
+                    <i class="fas fa-pen-nib contact-icon" aria-hidden="true"></i>
                     <span>Hashnode</span>
                 </a>
-                
-                
             </div>
         </section>
+
     </main>
 
     <footer>
         <p>&copy; 2024 Darshan Atkari. All rights reserved.</p>
     </footer>
 
-    <!-- Email Popup -->
-    <div id="email-popup" class="email-popup hidden">
-        <p>Email: atkaridarshan04@gmail.com</p>
-        <button class="styled-button" onclick="closeEmailPopup()">Close</button>
-    </div>
-
+    <!-- JavaScript -->
     <script>
-        function showEmailPopup() {
-            document.getElementById('email-popup').classList.remove('hidden');
-        }
+        document.querySelectorAll('header nav a').forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                const targetId = link.getAttribute('href').slice(1);
+                const targetElement = document.getElementById(targetId);
 
-        function closeEmailPopup() {
-            document.getElementById('email-popup').classList.add('hidden');
-        }
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth',
+                    });
+                }
+            });
+        });
     </script>
 </body>
 

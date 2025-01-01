@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Reset and Body Styling */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -7,6 +7,7 @@ body {
     background-color: #f9f9f9;
 }
 
+/* Enhanced Container */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -14,44 +15,65 @@ body {
     padding: 20px;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #3498db;
-}
-
-/* Header */
 header {
-    background-color: #3498db;
+    background: linear-gradient(90deg, #007BFF, #00BFFF); 
     color: #fff;
-    padding: 15px 0;
-    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2rem; /* Reduced header size */
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; 
 }
 
-nav a {
-    margin: 0 15px;
+header nav {
+    text-align: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
     font-size: 1rem;
-    color: white;
-    transition: color 0.3s ease;
+    margin: 0 15px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
-nav a:hover {
-    color: #f0f8ff;
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #FFD700;
 }
 
-/* Section Box */
+header nav a.active {
+    border-bottom: 2px solid #FFD700;
+}
+
+header .contact-btn {
+    background-color: #FFD700;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header .contact-btn:hover {
+    background-color: #FFC107;
+    color: #000;
+}
+
 .section-box {
     margin-bottom: 50px;
     background: #fff;
@@ -130,7 +152,7 @@ nav a:hover {
 /* Styled Button */
 .styled-button {
     padding: 10px 20px;
-    background-color: #3498db;
+    background: linear-gradient(90deg, #007BFF, #00BFFF);
     color: white;
     border: none;
     border-radius: 5px;
@@ -148,25 +170,6 @@ nav a:hover {
     text-decoration: none;
 }
 
-/* Email Popup */
-.email-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    z-index: 1001;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-.email-popup.hidden {
-    display: none;
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -177,4 +180,24 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+    }
+
+    header .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    header nav.active {
+        display: block;
+        background: linear-gradient(90deg, #007BFF, #00BFFF);
+        padding: 20px 0;
+    }
 }
